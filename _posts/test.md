@@ -19,8 +19,6 @@ prose.io 테스트입니다.
 
 [링크테스트](https://blog-m4nd4r1n.vercel.app/)
 
-![이미지 테스트]({{site.baseurl}}/_posts/black.png)
-
 **볼드 테스트**
 
 _이탤릭 테스트_
@@ -30,4 +28,3 @@ _이탤릭 테스트_
 > This is a first blockquote.
 >	> This is a second blockquote.
 >	>	> This is a third blockquote.
-
