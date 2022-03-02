@@ -8,6 +8,7 @@ author:
 ogImage:
   url: ''
 published: true
+coverImage: ''
 ---
 prose.io 테스트입니다.
 
