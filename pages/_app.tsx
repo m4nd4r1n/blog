@@ -1,6 +1,7 @@
 import { AppProps } from "next/app";
 import { useEffect } from "react";
 import "../styles/index.css";
+import "../styles/github-markdown.css";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -11,8 +12,10 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     ) {
       localStorage.theme = "dark";
       document.documentElement.classList.add("dark");
+      document.documentElement.classList.remove("light");
     } else {
       localStorage.theme = "light";
+      document.documentElement.classList.add("light");
       document.documentElement.classList.remove("dark");
     }
   }, []);
