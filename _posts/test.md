@@ -8,7 +8,7 @@ author:
 ogImage:
   url: ""
 published: true
-coverImage: ""
+coverImage: /assets/blog/hello-world/cover.jpg
 ---
 
 # This is a H1

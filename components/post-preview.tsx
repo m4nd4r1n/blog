@@ -28,7 +28,7 @@ const PostPreview = ({
       onClick={() => router.push(`/posts/${slug}`)}
     >
       <div className="mb-5">
-        <CoverImage slug={slug} title={title} src={coverImage} />
+        <CoverImage title={title} src={coverImage} />
       </div>
       <h3 className="text-3xl mb-3 leading-snug">{title}</h3>
       <div className="text-lg mb-4">

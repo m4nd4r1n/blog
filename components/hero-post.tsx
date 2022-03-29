@@ -27,8 +27,8 @@ const HeroPost = ({
       className="cursor-pointer hover:animate-pulse"
       onClick={() => router.push(`/posts/${slug}`)}
     >
-      <div className="mb-8 md:mb-16 ">
-        <CoverImage title={title} src={coverImage} slug={slug} />
+      <div className="mb-8 md:mb-16">
+        <CoverImage title={title} src={coverImage} />
       </div>
       <div className="md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8 mb-20 md:mb-28">
         <div>
