@@ -13,11 +13,11 @@ coverImage: /assets/blog/mysql.png
 
 # 1. MySQL 접속
 
-```
+```shell
 mysql.server start
 ```
 
-```
+```shell
 mysql -u root -p
 ```
 
@@ -25,11 +25,11 @@ mysql -u root -p
 
 # 2. 계정 추가
 
-```
+```shell
 mysql> use mysql;
 ```
 
-```
+```shell
 mysql> create user ACCOUNT@localhost identified by 'PASSWORD';
 ```
 
@@ -41,13 +41,13 @@ mysql> create user ACCOUNT@localhost identified by 'PASSWORD';
 
 ### 모든 DB와 테이블에 대한 모든 권한
 
-```
+```shell
 mysql> grant all privileges on *.* to ACCOUNT@localhost;
 ```
 
 ### 특정 DB에 대한 모든 권한
 
-```
+```shell
 mysql> grant all privileges on DB.* to ACCOUNT@localhost;
 ```
 
@@ -55,6 +55,6 @@ mysql> grant all privileges on DB.* to ACCOUNT@localhost;
 
 # 4. 메모리에 반영
 
-```
+```shell
 mysql> flush privileges;
 ```

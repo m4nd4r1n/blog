@@ -1,3 +1,7 @@
+import ReactMarkDown from "react-markdown";
+import rehypeHighlight from "rehype-highlight";
+import remarkGfm from "remark-gfm";
+
 type Props = {
   content: string;
 };
@@ -5,10 +9,13 @@ type Props = {
 const PostBody = ({ content }: Props) => {
   return (
     <div className="max-w-2xl mx-auto bg-none">
-      <div
-        className="after:bg-transparent  markdown-body"
-        dangerouslySetInnerHTML={{ __html: content }}
-      />
+      <div className="markdown-body">
+        <ReactMarkDown
+          children={content}
+          remarkPlugins={[remarkGfm]}
+          rehypePlugins={[rehypeHighlight]}
+        />
+      </div>
     </div>
   );
 };

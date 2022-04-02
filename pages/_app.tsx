@@ -2,6 +2,7 @@ import { AppProps } from "next/app";
 import { useEffect } from "react";
 import "../styles/index.css";
 import "../styles/github-markdown.css";
+import "../styles/github-highlight.css";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {

@@ -1,0 +1,157 @@
+/*!
+  Theme: GitHub
+  Description: Light theme as seen on github.com
+  Author: github.com
+  Maintainer: @Hirse
+  Updated: 2021-05-15
+  Outdated base version: https://github.com/primer/github-syntax-light
+  Current colors taken from GitHub's CSS
+*/
+
+.dark {
+  --hljs-color: #c9d1d9;
+  --hljs-bg: #0d1117;
+  --prettylights-syntax-keyword: #ff7b72;
+  --prettylights-syntax-entity: #d2a8ff;
+  --prettylights-syntax-constant: #79c0ff;
+  --prettylights-syntax-string: #a5d6ff;
+  --prettylights-syntax-variable: #ffa657;
+  --prettylights-syntax-comment: #8b949e;
+  --prettylights-syntax-entity-tag: #7ee787;
+  --prettylights-syntax-storage-modifier-import: #c9d1d9;
+  --prettylights-syntax-markup-heading: #1f6feb;
+  --prettylights-syntax-markup-list: #f2cc60;
+  --prettylights-syntax-markup-italic: #c9d1d9;
+  --prettylights-syntax-markup-bold: #c9d1d9;
+  --prettylights-syntax-markup-inserted-color: #aff5b4;
+  --prettylights-syntax-markup-inserted-bg: #033a16;
+  --prettylights-syntax-markup-deleted-color: #ffdcd7;
+  --prettylights-syntax-markup-deleted-bg: #67060c;
+}
+
+.light {
+  --hljs-color: #24292e;
+  --hljs-bg: #ffffff;
+  --prettylights-syntax-keyword: #d73a49;
+  --prettylights-syntax-entity: #6f42c1;
+  --prettylights-syntax-constant: #005cc5;
+  --prettylights-syntax-string: #032f62;
+  --prettylights-syntax-variable: #e36209;
+  --prettylights-syntax-comment: #6a737d;
+  --prettylights-syntax-entity-tag: #22863a;
+  --prettylights-syntax-storage-modifier-import: #24292e;
+  --prettylights-syntax-markup-heading: #005cc5;
+  --prettylights-syntax-markup-list: #735c0f;
+  --prettylights-syntax-markup-italic: #24292e;
+  --prettylights-syntax-markup-bold: #24292e;
+  --prettylights-syntax-markup-inserted-color: #22863a;
+  --prettylights-syntax-markup-inserted-bg: #f0fff4;
+  --prettylights-syntax-markup-deleted-color: #b31d28;
+  --prettylights-syntax-markup-deleted-bg: #ffeef0;
+}
+
+.hljs {
+  color: var(--hljs-color);
+  background: var(--hljs-bg);
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-meta .hljs-keyword,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-type,
+.hljs-variable.language_ {
+  /* prettylights-syntax-keyword */
+  color: var(--prettylights-syntax-keyword);
+}
+
+.hljs-title,
+.hljs-title.class_,
+.hljs-title.class_.inherited__,
+.hljs-title.function_ {
+  /* prettylights-syntax-entity */
+  color: var(--prettylights-syntax-entity);
+}
+
+.hljs-attr,
+.hljs-attribute,
+.hljs-literal,
+.hljs-meta,
+.hljs-number,
+.hljs-operator,
+.hljs-variable,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-id {
+  /* prettylights-syntax-constant */
+  color: var(--prettylights-syntax-constant);
+}
+
+.hljs-regexp,
+.hljs-string,
+.hljs-meta .hljs-string {
+  /* prettylights-syntax-string */
+  color: var(--prettylights-syntax-string);
+}
+
+.hljs-built_in,
+.hljs-symbol {
+  /* prettylights-syntax-variable */
+  color: var(--prettylights-syntax-variable);
+}
+
+.hljs-comment,
+.hljs-code,
+.hljs-formula {
+  /* prettylights-syntax-comment */
+  color: var(--prettylights-syntax-comment);
+}
+
+.hljs-name,
+.hljs-quote,
+.hljs-selector-tag,
+.hljs-selector-pseudo {
+  /* prettylights-syntax-entity-tag */
+  color: var(--prettylights-syntax-entity-tag);
+}
+
+.hljs-subst {
+  /* prettylights-syntax-storage-modifier-import */
+  color: var(--prettylights-syntax-storage-modifier-import);
+}
+
+.hljs-section {
+  /* prettylights-syntax-markup-heading */
+  color: var(--prettylights-syntax-markup-heading);
+  font-weight: bold;
+}
+
+.hljs-bullet {
+  /* prettylights-syntax-markup-list */
+  color: var(--prettylights-syntax-markup-list);
+}
+
+.hljs-emphasis {
+  /* prettylights-syntax-markup-italic */
+  color: var(--prettylights-syntax-markup-italic);
+  font-style: italic;
+}
+
+.hljs-strong {
+  /* prettylights-syntax-markup-bold */
+  color: var(--prettylights-syntax-markup-bold);
+  font-weight: bold;
+}
+
+.hljs-addition {
+  /* prettylights-syntax-markup-inserted */
+  color: var(--prettylights-syntax-markup-inserted-color);
+  background-color: var(--prettylights-syntax-markup-inserted-bg);
+}
+
+.hljs-deletion {
+  /* prettylights-syntax-markup-deleted */
+  color: var(--prettylights-syntax-markup-deleted-color);
+  background-color: var(--prettylights-syntax-markup-deleted-bg);
+}

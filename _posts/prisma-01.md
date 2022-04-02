@@ -25,13 +25,13 @@ PostgreSQL, MySQL, SQL Server, SQLite, MongoDB(프리뷰), CockroachDB(프리뷰
 
 ### npm
 
-```
+```bash
 npm i -D prisma
 ```
 
 ### yarn
 
-```
+```bash
 yarn add -D prisma
 ```
 
@@ -39,7 +39,7 @@ yarn add -D prisma
 
 ## Prisma 프로젝트 생성
 
-```
+```bash
 npx prisma init
 ```
 
@@ -47,7 +47,7 @@ npx prisma init
 
 ## DB 연결
 
-```
+```text
 # .env 파일
 # PostgreSQL, MySQL 등의 DB URL 입력
 
@@ -60,7 +60,7 @@ DATABASE_URL=postgresql://<사용자>:<비밀번호>@<주소>:5432/<DB명>
 
 > Visual Studio Code를 사용하는 경우 [확장 프로그램](https://marketplace.visualstudio.com/items?itemName=Prisma.prisma) 설치하기
 
-```
+```ts
 // prisma/schema.prisma 파일
 
 generator client {
@@ -90,7 +90,7 @@ model User {
 
 ## DB에 적용
 
-```
+```bash
 npx prisma db push
 ```
 
@@ -98,6 +98,6 @@ npx prisma db push
 
 ## + Prisma Studio
 
-```
+```bash
 npx prisma studio
 ```
