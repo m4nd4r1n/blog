@@ -21,7 +21,7 @@ const DarkModeToggle = () => {
 
   return (
     <button
-      className="flex select-none mt-5 rounded-full ring text-[#303340] dark:text-[#c9d1d9] ring-[#303340] dark:ring-[#c9d1d9] w-8 h-8 text-center items-center justify-center"
+      className="flex select-none mt-5 rounded-full ring text-[#303340] dark:text-[#c9d1d9] ring-[#303340] dark:ring-[#c9d1d9] w-8 h-8 text-center items-center justify-center hover:animate-wiggle"
       onClick={onClick}
     >
       {theme === "dark" ? (

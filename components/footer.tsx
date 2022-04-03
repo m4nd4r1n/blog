@@ -15,7 +15,7 @@ const Footer = () => {
               Next.js/blog-starter-typescript
             </a>
           </div>
-          <button className="flex select-none items-center justify-center">
+          <button className="flex select-none items-center justify-center hover:animate-wiggle">
             <a href={`https://github.com/m4nd4r1n`} target="_blank">
               <svg className="w-12 h-12" viewBox="0 0 24 24">
                 <path
