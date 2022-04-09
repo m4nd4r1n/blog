@@ -21,7 +21,7 @@ mysql.server start
 mysql -u root -p
 ```
 
-### ㅤ
+<br>
 
 # 2. 계정 추가
 
@@ -35,7 +35,7 @@ mysql> create user ACCOUNT@localhost identified by 'PASSWORD';
 
 > ACCOUNT와 PASSWORD는 원하는 것으로 변경
 
-### ㅤ
+<br>
 
 # 3. 권한 부여
 
@@ -51,7 +51,7 @@ mysql> grant all privileges on *.* to ACCOUNT@localhost;
 mysql> grant all privileges on DB.* to ACCOUNT@localhost;
 ```
 
-### ㅤ
+<br>
 
 # 4. 메모리에 반영
 
