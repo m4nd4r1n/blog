@@ -11,19 +11,19 @@ published: true
 coverImage: /assets/blog/mysql.png
 ---
 
-# 1. MySQL 접속
+## 1. MySQL 접속
 
 ```shell
-mysql.server start
+$ mysql.server start
 ```
 
 ```shell
-mysql -u root -p
+$ mysql -u root -p
 ```
 
 <br>
 
-# 2. 계정 추가
+## 2. 계정 추가
 
 ```shell
 mysql> use mysql;
@@ -37,7 +37,7 @@ mysql> create user ACCOUNT@localhost identified by 'PASSWORD';
 
 <br>
 
-# 3. 권한 부여
+## 3. 권한 부여
 
 ### 모든 DB와 테이블에 대한 모든 권한
 
@@ -53,7 +53,7 @@ mysql> grant all privileges on DB.* to ACCOUNT@localhost;
 
 <br>
 
-# 4. 메모리에 반영
+## 4. 메모리에 반영
 
 ```shell
 mysql> flush privileges;

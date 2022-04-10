@@ -1,6 +1,6 @@
 ---
 title: Prisma 시작하기
-excerpt: Prisma
+excerpt: Prisma v3.12.0
 date: "2022-04-01 01:53:23"
 author:
   name: m4nd4r1n
@@ -15,7 +15,7 @@ coverImage: /assets/blog/prisma.png
 
 Node.js 및 Typescript ORM(Object Relational Mapping)
 
-PostgreSQL, MySQL, SQL Server, SQLite, MongoDB(프리뷰), CockroachDB(프리뷰) 지원
+PostgreSQL, MySQL, SQL Server, SQLite, MongoDB, CockroachDB(프리뷰) 지원
 
 > [공식 문서](https://www.prisma.io/docs/)
 
@@ -25,22 +25,22 @@ PostgreSQL, MySQL, SQL Server, SQLite, MongoDB(프리뷰), CockroachDB(프리뷰
 
 ### npm
 
-```bash
-npm i -D prisma
+```shell
+$ npm i -D prisma
 ```
 
 ### yarn
 
-```bash
-yarn add -D prisma
+```shell
+$ yarn add -D prisma
 ```
 
 <br>
 
 ## Prisma 프로젝트 생성
 
-```bash
-npx prisma init
+```shell
+$ npx prisma init
 ```
 
 <br>
@@ -90,14 +90,14 @@ model User {
 
 ## DB에 적용
 
-```bash
-npx prisma db push
+```shell
+$ npx prisma db push
 ```
 
 <br>
 
 ## + Prisma Studio
 
-```bash
-npx prisma studio
+```shell
+$ npx prisma studio
 ```
