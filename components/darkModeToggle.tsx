@@ -1,6 +1,11 @@
 import { useEffect, useState } from "react";
+import { cls } from "@lib/utils";
 
-const DarkModeToggle = () => {
+interface FloatingButton {
+  isFloating?: boolean;
+}
+
+const DarkModeToggle = ({ isFloating = false }: FloatingButton) => {
   const [theme, setTheme] = useState("");
   useEffect(() => {
     setTheme(localStorage.theme);
@@ -21,12 +26,15 @@ const DarkModeToggle = () => {
 
   return (
     <button
-      className="flex select-none mt-5 rounded-full ring text-[#303340] dark:text-[#c9d1d9] ring-[#303340] dark:ring-[#c9d1d9] w-8 h-8 text-center items-center justify-center hover:animate-wiggle"
+      className={cls(
+        "flex select-none mt-5 rounded-full w-7 h-7 md:w-8 md:h-8 ring text-[#303340] dark:text-[#c9d1d9] ring-[#303340] dark:ring-[#c9d1d9]  text-center items-center justify-center hover:animate-wiggle",
+        isFloating ? "bg-white dark:bg-[#0d1117]" : ""
+      )}
       onClick={onClick}
     >
       {theme === "dark" ? (
         <svg
-          className="w-6 h-6"
+          className="w-5 h-5 md:w-6 md:h-6"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -41,7 +49,7 @@ const DarkModeToggle = () => {
         </svg>
       ) : (
         <svg
-          className="w-6 h-6"
+          className="w-5 h-5 md:w-6 md:h-6"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"

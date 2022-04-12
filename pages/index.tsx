@@ -6,6 +6,7 @@ import Layout from "@components/layout";
 import { getAllPosts } from "@lib/api";
 import Head from "next/head";
 import Post from "../types/post";
+import FloatingButton from "@components/floating-button";
 
 type Props = {
   allPosts: Post[];
@@ -34,6 +35,7 @@ const Index = ({ allPosts }: Props) => {
             />
           )}
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+          <FloatingButton />
         </Container>
       </Layout>
     </>

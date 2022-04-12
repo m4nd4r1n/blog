@@ -12,6 +12,9 @@ module.exports = {
           "50%": { transform: "rotate(6deg)" },
         },
       },
+      screens: {
+        floating: "1152px",
+      },
     },
   },
   darkMode: "class",
