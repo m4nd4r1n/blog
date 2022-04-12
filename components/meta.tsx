@@ -1,6 +1,17 @@
 import Head from "next/head";
+import { useState, useEffect } from "react";
+import useStore from "@lib/store";
 
 const Meta = () => {
+  const { theme } = useStore();
+  const [color, setColor] = useState("#000");
+  useEffect(() => {
+    if (theme === "dark") {
+      setColor("#0d1117");
+    } else {
+      setColor("#fff");
+    }
+  }, [theme]);
   return (
     <Head>
       <link
@@ -29,7 +40,7 @@ const Meta = () => {
       <link rel="shortcut icon" href="/favicon/favicon.ico" />
       <meta name="msapplication-TileColor" content="#000000" />
       <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
-      <meta name="theme-color" content="#000" />
+      <meta name="theme-color" content={color} />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <meta name="description" content={`m4nd4r1n\`s Devlog.`} />
     </Head>

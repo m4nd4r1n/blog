@@ -1,26 +1,23 @@
-import { useEffect, useState } from "react";
 import { cls } from "@lib/utils";
+import useStore from "@lib/store";
 
 interface FloatingButton {
   isFloating?: boolean;
 }
 
 const DarkModeToggle = ({ isFloating = false }: FloatingButton) => {
-  const [theme, setTheme] = useState("");
-  useEffect(() => {
-    setTheme(localStorage.theme);
-  }, []);
+  const { theme, setDark, setLight } = useStore();
   const onClick = () => {
     if (localStorage.theme === "dark") {
       localStorage.theme = "light";
       document.documentElement.classList.add("light");
       document.documentElement.classList.remove("dark");
-      setTheme("light");
+      setLight();
     } else {
       localStorage.theme = "dark";
       document.documentElement.classList.add("dark");
       document.documentElement.classList.remove("light");
-      setTheme("dark");
+      setDark();
     }
   };
 
