@@ -1,6 +1,12 @@
 import create from "zustand";
 
-const useStore = create((set: any) => ({
+interface ThemeState {
+  theme: string;
+  setLight: () => void;
+  setDark: () => void;
+}
+
+const useStore = create<ThemeState>((set) => ({
   theme: "dark",
   setLight: () => set({ theme: "light" }),
   setDark: () => set({ theme: "dark" }),

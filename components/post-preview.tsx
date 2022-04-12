@@ -24,8 +24,12 @@ const PostPreview = ({
   const router = useRouter();
   return (
     <div
-      className="cursor-pointer hover:animate-pulse"
+      className="cursor-pointer hover:animate-pulse focus:animate-pulse"
       onClick={() => router.push(`/posts/${slug}`)}
+      tabIndex={1}
+      onKeyPress={(e) =>
+        e.code === "Enter" ? router.push(`/posts/${slug}`) : null
+      }
     >
       <div className="mb-5">
         <CoverImage title={title} src={coverImage} />

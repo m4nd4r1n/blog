@@ -24,8 +24,12 @@ const HeroPost = ({
   const router = useRouter();
   return (
     <section
-      className="cursor-pointer hover:animate-pulse"
+      className="cursor-pointer hover:animate-pulse focus:animate-pulse"
       onClick={() => router.push(`/posts/${slug}`)}
+      onKeyPress={(e) =>
+        e.code === "Enter" ? router.push(`/posts/${slug}`) : null
+      }
+      tabIndex={1}
     >
       <div className="mb-8 md:mb-16">
         <CoverImage title={title} src={coverImage} />
