@@ -1,5 +1,6 @@
 import { cls } from "@lib/utils";
 import useStore from "@lib/store";
+import { useEffect, useState } from "react";
 
 interface FloatingButton {
   isFloating?: boolean;
@@ -7,19 +8,19 @@ interface FloatingButton {
 
 const DarkModeToggle = ({ isFloating = false }: FloatingButton) => {
   const { theme, setDark, setLight } = useStore();
+  const [loaded, setLoaded] = useState(false);
   const onClick = () => {
-    if (localStorage.theme === "dark") {
-      localStorage.theme = "light";
+    if (theme && theme === "dark") {
       document.documentElement.classList.add("light");
       document.documentElement.classList.remove("dark");
       setLight();
     } else {
-      localStorage.theme = "dark";
       document.documentElement.classList.add("dark");
       document.documentElement.classList.remove("light");
       setDark();
     }
   };
+  useEffect(() => setLoaded(true), []);
 
   return (
     <button
@@ -29,7 +30,7 @@ const DarkModeToggle = ({ isFloating = false }: FloatingButton) => {
       )}
       onClick={onClick}
     >
-      {theme === "dark" ? (
+      {loaded && theme === "dark" ? (
         <svg
           className="w-5 h-5 md:w-6 md:h-6"
           fill="none"

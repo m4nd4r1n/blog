@@ -31,7 +31,7 @@ const PostPreview = ({
         e.code === "Enter" ? router.push(`/posts/${slug}`) : null
       }
     >
-      <div className="mb-5">
+      <div className="mb-5 relative h-64 w-full">
         <CoverImage title={title} src={coverImage} />
       </div>
       <h3 className="text-3xl mb-3 leading-snug">{title}</h3>

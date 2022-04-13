@@ -10,15 +10,13 @@ const CoverImage = ({ title, src }: Props) => {
     <Image
       src={src}
       alt={`Cover Image for ${title}`}
-      className="shadow-sm rounded "
-      width={16}
-      height={9}
-      layout="responsive"
-      objectFit="cover"
+      layout="fill"
+      objectFit="contain"
       quality={100}
+      priority={true}
     />
   ) : null;
-  return <div className="sm:mx-0">{image}</div>;
+  return <>{image}</>;
 };
 
 export default CoverImage;

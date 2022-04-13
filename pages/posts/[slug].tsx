@@ -9,6 +9,7 @@ import { getPostBySlug, getAllPosts } from "@lib/api";
 import PostTitle from "@components/post-title";
 import Head from "next/head";
 import PostType from "../../types/post";
+import Comment from "@components/comment";
 
 type Props = {
   post: PostType;
@@ -27,7 +28,7 @@ const Post = ({ post }: Props) => {
           <PostTitle>Loading…</PostTitle>
         ) : (
           <>
-            <article className="mb-32 pt-32">
+            <article className="mb-16 pt-32">
               <Head>
                 <title>{post.title} | m4nd4r1n`s Devlog</title>
                 <meta property="og:image" content={post.ogImage.url} />
@@ -40,6 +41,7 @@ const Post = ({ post }: Props) => {
               />
               <PostBody content={post.content} />
             </article>
+            <Comment />
           </>
         )}
       </Container>
