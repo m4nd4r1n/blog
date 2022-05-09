@@ -1,8 +1,8 @@
 import { AppProps } from "next/app";
 import { useEffect } from "react";
 import "../styles/index.css";
-import "../styles/github-markdown.css";
-import "../styles/github-highlight.css";
+import "highlight.js/styles/github.css";
+import "github-markdown-css/github-markdown.css";
 import useStore from "@lib/store";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
